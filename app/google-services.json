@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "928398921197",
+    "project_id": "virtual-menu-96844",
+    "storage_bucket": "virtual-menu-96844.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928398921197:android:4f8748d314d415451e2be4",
+        "android_client_info": {
+          "package_name": "com.example.virtualmenu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6iTWNokl8pEYl7k0tpkOfEPxHRAOBPNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
