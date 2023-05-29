@@ -5,14 +5,18 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.virtualmenu.databinding.ActivityAdminBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.ArrayList
 
 class AdminActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
     private lateinit var binding : ActivityAdminBinding
 
+    private lateinit var adapterproduct : Adapterproductos
+    private lateinit var producList : ArrayList<ItemProduct>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +32,33 @@ class AdminActivity : AppCompatActivity() {
 
         borrarProducto.setOnClickListener(){
             eliminarProducto()
-            //llamarrecyclerview()
+            llamarrecyclerview()
         }
+
+        llamarrecyclerview()
+    }
+
+    private fun llamarrecyclerview() {
+        producList = ArrayList()
+        adapterproduct = Adapterproductos(producList)
+        db.collection("Productos")
+            .get()
+            .addOnSuccessListener { documets ->
+                for(document in documets){
+                    val wallItem = document.toObject(ItemProduct::class.java)
+                    wallItem.idProduct = document.id
+                    wallItem.nomProduct = document["Nombre"].toString()
+                    wallItem.tipProduct = document["Tipo"].toString()
+                    wallItem.preProduct = document["Precio"].toString().toInt()
+                    wallItem.nitProduct = document["Codigo"].toString()
+                    wallItem.imgProduct = document["Imagen"].toString()
+
+                    binding.recyclerssProduct.adapter = adapterproduct
+                    binding.recyclerssProduct.layoutManager = LinearLayoutManager(this)
+                    producList.add(wallItem)
+                }
+            }
+
     }
 
     private fun agregarDatos() {
@@ -52,11 +81,11 @@ class AdminActivity : AppCompatActivity() {
                 .add(user)
                 .addOnSuccessListener {  documentReference ->
                     Toast.makeText(this, "Producto agregado correctamente", Toast.LENGTH_LONG).show()
-                    println("agregado correctamente xd")
+                    println("agregado correctamente")
 
 
-                    //llamarrecyclerview()
-                    //adapterproduct.notifyDataSetChanged()
+                    llamarrecyclerview()
+                    adapterproduct.notifyDataSetChanged()
                 }
                 .addOnFailureListener {e-> Log.w("Tag","Error $e")}
 
