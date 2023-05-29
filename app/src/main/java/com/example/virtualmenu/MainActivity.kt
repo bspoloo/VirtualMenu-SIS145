@@ -19,16 +19,12 @@ class MainActivity : AppCompatActivity() {
 
         analitycs.logEvent("MainActivity", bundle)
 
-
-
         val ButtonPlatos = findViewById<Button>(R.id.buttonPlatos) as Button
         val ButtonBebidas = findViewById<Button>(R.id.buttonBebidas) as Button
         val ButtonPostres = findViewById<Button>(R.id.buttonPostres) as Button
         val ButtonSalir = findViewById<Button>(R.id.buttonSalir) as Button
         val ButtonAcerca = findViewById<Button>(R.id.buttonAcerca) as Button
         val ButtonAdmin = findViewById<Button>(R.id.buttonAdmin) as Button
-
-
 
         ButtonPlatos.setOnClickListener(){
             val intent = Intent(this , PlatosActivity::class.java)

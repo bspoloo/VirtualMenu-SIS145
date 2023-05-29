@@ -41,11 +41,11 @@ class AdminActivity : AppCompatActivity() {
         else{
             val user = hashMapOf(
 
-                "Nombre del producto" to binding.DatoProducto.text.toString(),
-                "Tipo del producto" to binding.DatoTipo.text.toString(),
-                "Precio del producto" to binding.DatoPrecio.text.toString().toInt(),
-                "Codigo del producto" to binding.DatoNitProducto.text.toString(),
-                "Imagen del producto" to "https://waifus.wiki/wp-content/uploads/2021/07/Es2oz-LW4AEqdmd.jpg"
+                "Nombre" to binding.DatoProducto.text.toString(),
+                "Tipo" to binding.DatoTipo.text.toString(),
+                "Precio" to binding.DatoPrecio.text.toString().toInt(),
+                "Codigo" to binding.DatoNitProducto.text.toString(),
+                "Imagen" to "https://waifus.wiki/wp-content/uploads/2021/07/Es2oz-LW4AEqdmd.jpg"
 
             )
             db.collection("Productos")

@@ -5,78 +5,126 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#41BD96">
+    android:background="@drawable/background">
 
-    <Button
-        android:id="@+id/buttonPostres"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Postres"
+
+    <ImageView
+        android:layout_width="218dp"
+        android:layout_height="263dp"
+        android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423" />
-
-    <Button
-        android:id="@+id/buttonSalir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Salir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.525" />
-
-    <Button
-        android:id="@+id/buttonBebidas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Bebidas"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonPlatos"
+        android:layout_width="280dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#E86868"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="40dp"
         android:text="Platos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:icon="@drawable/baseline_fastfood_24"
+        app:iconPadding="9dp"
+        app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.394" />
+
+    <Button
+        android:id="@+id/buttonPostres"
+        android:layout_width="280dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#E86868"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="40dp"
+        android:text="Postres"
+        android:textColor="@color/black"
+        app:icon="@drawable/desserticon"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.614" />
+
+    <Button
+        android:id="@+id/buttonBebidas"
+        android:layout_width="280dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#E86868"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="40dp"
+        android:text="Bebidas"
+        android:textColor="@color/black"
+        app:icon="@drawable/drinkicon"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.507" />
 
     <Button
         android:id="@+id/buttonAcerca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Acerca de......."
+        android:layout_width="280dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#E86868"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="40dp"
+        android:text="Acerca de..."
+        android:textColor="@color/black"
+        app:icon="@drawable/abouticon"
+        app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
+        app:layout_constraintVertical_bias="0.845" />
+
+    <Button
+        android:id="@+id/buttonSalir"
+        android:layout_width="280dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#E86868"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="40dp"
+        android:text="Salir"
+        android:textColor="@color/black"
+        app:icon="@drawable/baseline_exit_to_app_24"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.728" />
 
     <Button
         android:id="@+id/buttonAdmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Modo administrador"
+        android:layout_width="175dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#E86868"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="40dp"
+        android:text="Administrar"
+        android:textColor="@color/black"
+        app:icon="@drawable/baseline_admin_panel_settings_24"
+        app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.771" />
+        app:layout_constraintVertical_bias="0.976" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
