@@ -14,6 +14,27 @@
         android:theme="@style/Theme.VirtualMenu"
         tools:targetApi="31">
         <activity
+            android:name=".TesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CervezasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RefrescosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GaseosasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExtrasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SegundosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SopasActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminActivity"
             android:exported="false" />
         <activity

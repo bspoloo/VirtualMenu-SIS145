@@ -7,11 +7,10 @@
     tools:context=".MainActivity"
     android:background="@drawable/background">
 
-
     <ImageView
         android:layout_width="218dp"
         android:layout_height="263dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/logoresturant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

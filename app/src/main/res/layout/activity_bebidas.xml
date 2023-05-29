@@ -5,6 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BebidasActivity"
-    android:background="@drawable/fondomenu">
+    android:background="@drawable/fondobebidas">
 
+
+    <ImageButton
+        android:id="@+id/imgBtnGaseosa"
+        android:layout_width="145dp"
+        android:layout_height="175dp"
+        android:src="@drawable/gaseosas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163" />
+
+    <ImageButton
+        android:id="@+id/imgBtnRefresco"
+        android:layout_width="149dp"
+        android:layout_height="116dp"
+        android:src="@drawable/refresco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453" />
+
+    <ImageButton
+        android:id="@+id/imgBtnCerveza"
+        android:layout_width="149dp"
+        android:layout_height="162dp"
+        android:src="@drawable/cerveza"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <ImageButton
+        android:id="@+id/imgBtnTe"
+        android:layout_width="149dp"
+        android:layout_height="123dp"
+        android:src="@drawable/te"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.958" />
 </androidx.constraintlayout.widget.ConstraintLayout>
