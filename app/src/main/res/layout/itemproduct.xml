@@ -41,14 +41,21 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Precio del Producto"
-                android:id="@+id/precioProducto"/>
+                android:hint="Descripcion del Producto"
+                android:id="@+id/descpProducto"/>
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Codigo del Producto"
-                android:id="@+id/codigoProducto"/>
+                android:hint="Producto"
+                android:id="@+id/productProducto"/>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Precio del Producto"
+                android:id="@+id/precioProducto"/>
             <Button
 
                 android:layout_width="match_parent"

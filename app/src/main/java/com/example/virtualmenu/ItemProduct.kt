@@ -1,10 +1,11 @@
 package com.example.virtualmenu
 
 data class ItemProduct(
-    var idProduct : String = "",
-    var nomProduct : String = "",
-    var tipProduct : String = "",
-    var preProduct : Int = 0,
-    var nitProduct : String = "",
+    var id : String = "",
+    var nom : String = "",
+    var tip : String = "",
+    var descp : String="",
+    var product : String = "",
+    var pre : Int = 0,
     var imgProduct : String = ""
 )

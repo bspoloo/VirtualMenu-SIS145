@@ -46,11 +46,13 @@ class AdminActivity : AppCompatActivity() {
             .addOnSuccessListener { documets ->
                 for(document in documets){
                     val wallItem = document.toObject(ItemProduct::class.java)
-                    wallItem.idProduct = document.id
-                    wallItem.nomProduct = document["Nombre"].toString()
-                    wallItem.tipProduct = document["Tipo"].toString()
-                    wallItem.preProduct = document["Precio"].toString().toInt()
-                    wallItem.nitProduct = document["Codigo"].toString()
+                    wallItem.id = document.id
+                    wallItem.nom = document["Nombre"].toString()
+                    wallItem.tip = document["Tipo"].toString()
+                    wallItem.descp = document["Descripcion"].toString()
+                    wallItem.product = document["Producto"].toString()
+                    wallItem.pre = document["Precio"].toString().toInt()
+
                     wallItem.imgProduct = document["Imagen"].toString()
 
                     binding.recyclerssProduct.adapter = adapterproduct
@@ -63,7 +65,8 @@ class AdminActivity : AppCompatActivity() {
 
     private fun agregarDatos() {
 
-        if(binding.DatoTipo.text.toString().isBlank() or binding.DatoPrecio.text.toString().isBlank() or binding.DatoNitProducto.text.toString().isBlank()) {
+        if(binding.DatoTipo.text.toString().isBlank() or binding.DatoDescProducto.text.toString().isBlank() or binding.DatoProdProducto.text.toString().isBlank()
+            or binding.DatoPrecio.text.toString().isBlank() ) {
             Toast.makeText(this, "Por favor rellene los campos", Toast.LENGTH_LONG).show()
         }
 
@@ -72,9 +75,11 @@ class AdminActivity : AppCompatActivity() {
 
                 "Nombre" to binding.DatoProducto.text.toString(),
                 "Tipo" to binding.DatoTipo.text.toString(),
+                "Descripcion" to binding.DatoDescProducto.text.toString(),
+                "Producto" to binding.DatoProdProducto.text.toString(),
                 "Precio" to binding.DatoPrecio.text.toString().toInt(),
-                "Codigo" to binding.DatoNitProducto.text.toString(),
-                "Imagen" to "https://waifus.wiki/wp-content/uploads/2021/07/Es2oz-LW4AEqdmd.jpg"
+
+                "Imagen" to binding.DatoImgUrl.text.toString()
 
             )
             db.collection("Productos")
@@ -92,8 +97,11 @@ class AdminActivity : AppCompatActivity() {
 
             binding.DatoProducto.text.clear()
             binding.DatoTipo.text.clear()
+            binding.DatoDescProducto.text.clear()
+            binding.DatoProdProducto.text.clear()
             binding.DatoPrecio.text.clear()
-            binding.DatoNitProducto.text.clear()
+            binding.DatoImgUrl.text.clear()
+
 
         }
     }

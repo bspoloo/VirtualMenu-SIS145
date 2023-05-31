@@ -28,17 +28,18 @@ class Adapterproductos(private var items: MutableList<ItemProduct>):
     override fun onBindViewHolder(holder: Adapterproductos.ViewHolder, position: Int) {
         val item = items[position]
 
-        holder.nomP.text = item.nomProduct
-        holder.tipP.text = item.tipProduct
-        holder.preP.text = item.preProduct.toString()
-        holder.nitP.text = item.nitProduct
 
+        holder.nomP.text = item.nom
+        holder.tipP.text = item.tip
+        holder.descpP.text = item.descp
+        holder.prodctP.text = item.product
+        holder.preP.text = item.pre.toString()
 
         Glide.with(holder.itemView.context).load(item.imgProduct).circleCrop().into(holder.fotP)
         holder.botnPP.setOnClickListener{
             val activity = it.context //as AppCompatActivity
-            Toast.makeText(activity,"ollo, soy ${item.nomProduct} ${item.tipProduct}", Toast.LENGTH_LONG).show()
-            println("ollo, soy ${item.nomProduct} ${item.tipProduct}")
+            Toast.makeText(activity,"ollo, soy ${item.nom} ${item.tip}", Toast.LENGTH_LONG).show()
+            println("ollo, soy ${item.nom} ${item.tip}")
 
         }
 
@@ -54,7 +55,7 @@ class Adapterproductos(private var items: MutableList<ItemProduct>):
             builder.setMessage("Estas seguro de Eliminar este Producto?")
             builder.setPositiveButton("si"){ dialogInterface : DialogInterface, i: Int->
 
-                val elim= db.collection("Productos").document(item.idProduct)
+                val elim= db.collection("Productos").document(item.id)
                 db.runBatch{batch ->
                     batch.delete(elim)
                 }.addOnCompleteListener{
@@ -79,9 +80,11 @@ class Adapterproductos(private var items: MutableList<ItemProduct>):
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val nomP: TextView = view.findViewById(R.id.nombreProducto)
         val tipP: TextView = view.findViewById(R.id.tipoProducto)
+        val descpP: TextView = view.findViewById(R.id.descpProducto)
+        val prodctP: TextView = view.findViewById(R.id.productProducto)
         val preP: TextView = view.findViewById(R.id.precioProducto)
-        val nitP: TextView = view.findViewById(R.id.codigoProducto)
         val fotP: ImageView = view.findViewById(R.id.fotoProducto)
+        //para los botones creados en itemproduct
         val botnPP: Button = view.findViewById(R.id.botonPrecioname)
         val botnPE: Button = view.findViewById(R.id.botonEliminame)
 
