@@ -7,4 +7,14 @@
     tools:context=".PostresActivity"
     android:background="@drawable/fondopostres">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="5"
+        tools:listitem="@layout/card_view_design" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

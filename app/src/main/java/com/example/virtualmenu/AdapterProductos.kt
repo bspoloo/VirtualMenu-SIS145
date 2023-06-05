@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
 
 
-class Adapterproductos(private var items: MutableList<ItemProduct>):
+class Adapterproductos(private var items: MutableList<ItemProduct>): //
     RecyclerView.Adapter<Adapterproductos.ViewHolder>(){
     override fun onCreateViewHolder(
         parent: ViewGroup,
