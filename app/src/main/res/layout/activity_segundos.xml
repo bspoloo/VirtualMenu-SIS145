@@ -7,4 +7,28 @@
     tools:context=".SegundosActivity"
     android:background="@drawable/fondosegundos">
 
+    <LinearLayout
+        android:layout_width="376dp"
+        android:layout_height="584dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sopas a escoger" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerssProductSegundos"
+            android:layout_width="match_parent"
+            android:layout_height="542dp" />
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
