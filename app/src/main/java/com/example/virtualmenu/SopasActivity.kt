@@ -31,7 +31,7 @@ class SopasActivity : AppCompatActivity() {
         adapterprodct = AdapterMuestraProductos(producList)
 
         db.collection("Productos")
-            .whereEqualTo("Producto","Sopa")
+            .whereEqualTo("Tipo","Sopas")
             .get()
             .addOnSuccessListener { documets ->
                 for(document in documets){
@@ -40,9 +40,7 @@ class SopasActivity : AppCompatActivity() {
                     wallItem.nom = document["Nombre"].toString()
                     wallItem.tip = document["Tipo"].toString()
                     wallItem.descp = document["Descripcion"].toString()
-                    wallItem.product = document["Producto"].toString()
                     wallItem.pre = document["Precio"].toString().toInt()
-
                     wallItem.imgProduct = document["Imagen"].toString()
 
                     binding.recyclerssProductSopas.adapter = adapterprodct
@@ -52,9 +50,5 @@ class SopasActivity : AppCompatActivity() {
             }
 
     }
-
-
-
-
 
 }
