@@ -9,7 +9,6 @@ import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.virtualmenu.databinding.ActivityPostresBinding
-import com.example.virtualmenu.databinding.ActivitySopasBinding
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.ArrayList
 
@@ -34,7 +33,7 @@ class PostresActivity : AppCompatActivity() {
         adapterprodct = AdapterMuestraProductos(producList)
 
         db.collection("Productos")
-            .whereEqualTo("Producto","Postres")
+            .whereEqualTo("Tipo","Postres")
             .get()
             .addOnSuccessListener { documets ->
                 for(document in documets){
@@ -43,9 +42,7 @@ class PostresActivity : AppCompatActivity() {
                     wallItem.nom = document["Nombre"].toString()
                     wallItem.tip = document["Tipo"].toString()
                     wallItem.descp = document["Descripcion"].toString()
-                    wallItem.product = document["Producto"].toString()
                     wallItem.pre = document["Precio"].toString().toInt()
-
                     wallItem.imgProduct = document["Imagen"].toString()
 
                     binding.recyclerssProductPostres.adapter = adapterprodct

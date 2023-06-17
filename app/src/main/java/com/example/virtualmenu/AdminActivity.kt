@@ -46,14 +46,14 @@ class AdminActivity : AppCompatActivity() {
             .addOnSuccessListener { documets ->
                 for(document in documets){
                     val wallItem = document.toObject(ItemProduct::class.java)
+
                     wallItem.id = document.id
                     wallItem.nom = document["Nombre"].toString()
                     wallItem.tip = document["Tipo"].toString()
                     wallItem.descp = document["Descripcion"].toString()
-                    wallItem.product = document["Producto"].toString()
                     wallItem.pre = document["Precio"].toString().toInt()
-
                     wallItem.imgProduct = document["Imagen"].toString()
+
 
                     binding.recyclerssProduct.adapter = adapterproduct
                     binding.recyclerssProduct.layoutManager = LinearLayoutManager(this)
@@ -65,7 +65,8 @@ class AdminActivity : AppCompatActivity() {
 
     private fun agregarDatos() {
 
-        if(binding.DatoTipo.text.toString().isBlank() or binding.DatoDescProducto.text.toString().isBlank() or binding.DatoProdProducto.text.toString().isBlank()
+        if(    binding.DatoTipo.text.toString().isBlank()
+            or binding.DatoDescProducto.text.toString().isBlank()
             or binding.DatoPrecio.text.toString().isBlank() ) {
             Toast.makeText(this, "Por favor rellene los campos", Toast.LENGTH_LONG).show()
         }
@@ -76,9 +77,7 @@ class AdminActivity : AppCompatActivity() {
                 "Nombre" to binding.DatoProducto.text.toString(),
                 "Tipo" to binding.DatoTipo.text.toString(),
                 "Descripcion" to binding.DatoDescProducto.text.toString(),
-                "Producto" to binding.DatoProdProducto.text.toString(),
                 "Precio" to binding.DatoPrecio.text.toString().toInt(),
-
                 "Imagen" to binding.DatoImgUrl.text.toString()
 
             )
@@ -98,7 +97,6 @@ class AdminActivity : AppCompatActivity() {
             binding.DatoProducto.text.clear()
             binding.DatoTipo.text.clear()
             binding.DatoDescProducto.text.clear()
-            binding.DatoProdProducto.text.clear()
             binding.DatoPrecio.text.clear()
             binding.DatoImgUrl.text.clear()
 
