@@ -14,9 +14,9 @@ class AdminActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
     private lateinit var binding : ActivityAdminBinding
-
     private lateinit var adapterproduct : Adapterproductos
     private lateinit var producList : ArrayList<ItemProduct>
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

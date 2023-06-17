@@ -29,7 +29,7 @@ class GaseosasActivity : AppCompatActivity() {
         adapterprodct = AdapterMuestraProductos(producList)
 
         db.collection("Productos")
-            .whereEqualTo("Producto","Gaseosas")
+            .whereEqualTo("Tipo","Gaseosas")
             .get()
             .addOnSuccessListener { documets ->
                 for(document in documets){
