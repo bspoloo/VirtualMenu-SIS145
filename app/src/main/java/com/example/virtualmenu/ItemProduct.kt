@@ -5,7 +5,6 @@ data class ItemProduct(
     var nom : String = "",
     var tip : String = "",
     var descp : String="",
-    var product : String = "",
     var pre : Int = 0,
     var imgProduct : String = ""
 )

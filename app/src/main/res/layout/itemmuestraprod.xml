@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="4dp"
@@ -12,7 +13,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/model_1">
 
         <ImageView
             android:layout_width="100dp"
@@ -29,41 +31,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nombre del Producto"
-                android:id="@+id/nombreProducto"/>
+                android:id="@+id/nombreProducto"
+                android:textStyle="bold"
+                android:textColor="#EA8A4A"/>
 
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Tipo del Producto"
-                android:id="@+id/tipoProducto"/>
+                android:id="@+id/tipoProducto"
+                android:textStyle="bold"
+                android:textColor="#EA8A4A"/>
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Descripcion del Producto"
-                android:id="@+id/descpProducto"/>
-            <TextView
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Producto"
-                android:id="@+id/productProducto"/>
+                android:id="@+id/descpProducto"
+                android:textStyle="bold"
+                android:textColor="#EA8A4A"/>
 
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Precio del Producto"
-                android:id="@+id/precioProducto"/>
+                android:id="@+id/precioProducto"
+                android:textStyle="bold"
+                android:textColor="#EA8A4A"/>
             <Button
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Detalles"
-                android:id="@+id/botonDetalles"/>
+                android:id="@+id/botonDetalles"
+                android:textColor="@color/white"
+                android:background="@drawable/model_2"
+                />
 
         </LinearLayout>
     </LinearLayout>
+
 
 </androidx.cardview.widget.CardView>

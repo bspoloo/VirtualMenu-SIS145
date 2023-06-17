@@ -37,7 +37,6 @@ class TesActivity : AppCompatActivity() {
                     wallItem.nom = document["Nombre"].toString()
                     wallItem.tip = document["Tipo"].toString()
                     wallItem.descp = document["Descripcion"].toString()
-                    wallItem.product = document["Producto"].toString()
                     wallItem.pre = document["Precio"].toString().toInt()
 
                     wallItem.imgProduct = document["Imagen"].toString()

@@ -5,29 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SegundosActivity"
-    android:background="@drawable/fondosegundos">
+    android:background="@drawable/fondo_segundos">
+
 
     <LinearLayout
-        android:layout_width="376dp"
-        android:layout_height="584dp"
+        android:layout_width="386dp"
+        android:layout_height="475dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.952">
+        app:layout_constraintVertical_bias="0.671">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Segundos a escoger" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerssProductSegundos"
             android:layout_width="match_parent"
-            android:layout_height="542dp" />
-
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

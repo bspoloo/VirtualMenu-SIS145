@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ExtrasActivity"
-    android:background="@drawable/fondosextras">
+    android:background="@drawable/fondo_extras">
 
 
     <LinearLayout
@@ -14,20 +14,17 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.554">
+        app:layout_constraintVertical_bias="0.671">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Extras a escoger" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerssProductExtras"
-            android:layout_width="match_parent"
-            android:layout_height="452dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerssProductExtras"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

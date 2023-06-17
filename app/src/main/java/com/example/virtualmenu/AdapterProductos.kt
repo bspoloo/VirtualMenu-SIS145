@@ -32,20 +32,23 @@ class Adapterproductos(private var items: MutableList<ItemProduct>): //
         holder.nomP.text = item.nom
         holder.tipP.text = item.tip
         holder.descpP.text = item.descp
-        holder.prodctP.text = item.product
         holder.preP.text = item.pre.toString()
+
 
         Glide.with(holder.itemView.context).load(item.imgProduct).circleCrop().into(holder.fotP)
         holder.botnPP.setOnClickListener{
+
             val activity = it.context //as AppCompatActivity
             Toast.makeText(activity,"ollo, soy ${item.nom} ${item.tip}", Toast.LENGTH_LONG).show()
             println("ollo, soy ${item.nom} ${item.tip}")
+
 
         }
 
         holder.botnPE.setOnClickListener{
             /*items.removeAt(position)
             notifyDataSetChanged()*/
+
             val db = FirebaseFirestore.getInstance()
             val activity = it.context
             val builder = AlertDialog.Builder(activity)
@@ -81,10 +84,12 @@ class Adapterproductos(private var items: MutableList<ItemProduct>): //
         val nomP: TextView = view.findViewById(R.id.nombreProducto)
         val tipP: TextView = view.findViewById(R.id.tipoProducto)
         val descpP: TextView = view.findViewById(R.id.descpProducto)
-        val prodctP: TextView = view.findViewById(R.id.productProducto)
         val preP: TextView = view.findViewById(R.id.precioProducto)
         val fotP: ImageView = view.findViewById(R.id.fotoProducto)
+
+
         //para los botones creados en itemproduct
+
         val botnPP: Button = view.findViewById(R.id.botonPrecioname)
         val botnPE: Button = view.findViewById(R.id.botonEliminame)
 
