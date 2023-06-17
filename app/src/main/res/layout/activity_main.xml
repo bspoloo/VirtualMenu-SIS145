@@ -131,7 +131,7 @@
             android:id="@+id/imgBtnSopa"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:background="@drawable/segundo" />
+            android:background="@drawable/sopa" />
 
         <ImageButton
             android:id="@+id/imgBtnSegundo"
@@ -156,7 +156,7 @@
             android:id="@+id/imgBtnExtra"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:background="@drawable/segundo" />
+            android:background="@drawable/extras" />
 
         <ImageButton
             android:id="@+id/imgBtnGaseosa"
@@ -180,13 +180,13 @@
             android:id="@+id/imgBtnRefresco"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:background="@drawable/gaseosas" />
+            android:background="@drawable/refrescos" />
 
         <ImageButton
             android:id="@+id/imgBtnCerveza"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:background="@drawable/gaseosas" />
+            android:background="@drawable/cervezas" />
     </LinearLayout>
 
     <LinearLayout
