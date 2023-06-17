@@ -20,7 +20,9 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.023"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="25dp"/>
 
     <EditText
         android:id="@+id/DatoImgUrl"
@@ -32,10 +34,12 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
+        app:layout_constraintVertical_bias="0.315"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="25dp"/>
 
     <EditText
         android:id="@+id/DatoPrecio"
@@ -48,10 +52,12 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
+        app:layout_constraintVertical_bias="0.24"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="25dp"/>
 
     <EditText
         android:id="@+id/DatoDescProducto"
@@ -59,14 +65,16 @@
         android:layout_height="40dp"
         android:background="@drawable/model_1"
         android:hint="Descripcion del Producto"
-        android:text=""
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.159" />
+        app:layout_constraintVertical_bias="0.163"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="25dp"/>
+
 
     <EditText
         android:id="@+id/DatoTipo"
@@ -81,8 +89,9 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.088" />
-
+        app:layout_constraintVertical_bias="0.094"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="25dp"/>
 
     <Button
         android:id="@+id/buttonGuardar"
@@ -96,7 +105,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.392"
         android:background="@drawable/model_2"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+/>
 
     <EditText
         android:id="@+id/DatoBuscarProducto"
@@ -111,7 +121,9 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484" />
+        app:layout_constraintVertical_bias="0.484"
+        android:drawablePadding="-30dp"
+        android:paddingLeft="25dp"/>
 
     <Button
         android:id="@+id/buttonEliminar"
@@ -125,7 +137,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.572" />
+        app:layout_constraintVertical_bias="0.572"/>
 
     <LinearLayout
         android:layout_width="384dp"
