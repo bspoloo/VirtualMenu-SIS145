@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         ButtonAdmin.setOnClickListener(){
-            val intent = Intent(this , AdminActivity::class.java)
+            val intent = Intent(this , LogIn::class.java)
             startActivity(intent)
         }
 

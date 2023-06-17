@@ -20,7 +20,6 @@ class PostresActivity : AppCompatActivity() {
 
         llamarrecyclerview()
 
-
     }
 
     private fun llamarrecyclerview() {
