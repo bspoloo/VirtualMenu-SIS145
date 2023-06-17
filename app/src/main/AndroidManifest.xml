@@ -22,6 +22,9 @@
             android:name=".LogIn"
             android:exported="false" />
         <activity
+            android:name=".TodoslosProductos_Activity"
+            android:exported="false" />
+        <activity
             android:name=".TesActivity"
             android:exported="false" />
         <activity
