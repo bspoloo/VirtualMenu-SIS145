@@ -209,7 +209,7 @@
             android:id="@+id/buttonAcerca"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:background="@drawable/gaseosas" />
+            android:background="@drawable/acerca_de" />
 
     </LinearLayout>
 
