@@ -8,6 +8,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class RefrescosActivity : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()
+
     private lateinit var binding : ActivityRefrescosBinding
 
     private lateinit var adapterprodct : AdapterMuestraProductos
@@ -29,7 +30,7 @@ class RefrescosActivity : AppCompatActivity() {
         adapterprodct = AdapterMuestraProductos(producList)
 
         db.collection("Productos")
-            .whereEqualTo("Producto","Refrescos")
+            .whereEqualTo("Tipo","Refrescos")
             .get()
             .addOnSuccessListener { documets ->
                 for(document in documets){

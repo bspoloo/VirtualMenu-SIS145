@@ -29,7 +29,7 @@ class SegundosActivity : AppCompatActivity() {
 
         adapterprodct = AdapterMuestraProductos(producList)
         db.collection("Productos")
-            .whereEqualTo("Producto", "Segundo")
+            .whereEqualTo("Tipo", "Segundos")
             .get()
             .addOnSuccessListener { documets ->
                 for (document in documets) {
