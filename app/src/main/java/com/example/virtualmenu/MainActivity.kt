@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.analytics.FirebaseAnalytics
 
 class MainActivity : AppCompatActivity() {
@@ -19,28 +21,44 @@ class MainActivity : AppCompatActivity() {
 
         analitycs.logEvent("MainActivity", bundle)
 
-        val ButtonPlatos = findViewById<Button>(R.id.buttonPlatos) as Button
-        val ButtonBebidas = findViewById<Button>(R.id.buttonBebidas) as Button
-        val ButtonPostres = findViewById<Button>(R.id.buttonPostres) as Button
-        val ButtonSalir = findViewById<Button>(R.id.buttonSalir) as Button
-        val ButtonAcerca = findViewById<Button>(R.id.buttonAcerca) as Button
-        val ButtonAdmin = findViewById<Button>(R.id.buttonAdmin) as Button
+        val ButtonSopa = findViewById<ImageButton>(R.id.imgBtnSopa) as ImageButton
+        val ButtonSegundo = findViewById<ImageButton>(R.id.imgBtnSegundo) as ImageButton
+        val ButtonExtras = findViewById<ImageButton>(R.id.imgBtnExtra) as ImageButton
+        val ButtonGaseosa = findViewById<ImageButton>(R.id.imgBtnGaseosa) as ImageButton
+        val ButtonRefresco = findViewById<ImageButton>(R.id.imgBtnRefresco) as ImageButton
+        val ButtonCerveza = findViewById<ImageButton>(R.id.imgBtnCerveza) as ImageButton
+        val ButtonPostres = findViewById<ImageButton>(R.id.buttonPostres) as ImageButton
+        val ButtonAcerca = findViewById<ImageButton>(R.id.buttonAcerca) as ImageButton
+        val ButtonAdmin = findViewById<FloatingActionButton>(R.id.adminbtn) as FloatingActionButton
 
-        ButtonPlatos.setOnClickListener(){
-            val intent = Intent(this , PlatosActivity::class.java)
+        ButtonSopa.setOnClickListener(){
+            val intent = Intent(this , SopasActivity::class.java)
             startActivity(intent)
         }
-        ButtonBebidas.setOnClickListener(){
-            val intent = Intent(this , BebidasActivity::class.java)
+        ButtonSegundo.setOnClickListener(){
+            val intent = Intent(this , SegundosActivity::class.java)
+            startActivity(intent)
+        }
+        ButtonExtras.setOnClickListener(){
+            val intent = Intent(this , ExtrasActivity::class.java)
+            startActivity(intent)
+        }
+        ButtonGaseosa.setOnClickListener(){
+            val intent = Intent(this , GaseosasActivity::class.java)
             startActivity(intent)
         }
 
+        ButtonRefresco.setOnClickListener(){
+            val intent = Intent(this , RefrescosActivity::class.java)
+            startActivity(intent)
+        }
+        ButtonCerveza.setOnClickListener(){
+            val intent = Intent(this , CervezasActivity::class.java)
+            startActivity(intent)
+        }
         ButtonPostres.setOnClickListener(){
             val intent = Intent(this , PostresActivity::class.java)
             startActivity(intent)
-        }
-        ButtonSalir.setOnClickListener(){
-            finish()
         }
 
         ButtonAcerca.setOnClickListener(){

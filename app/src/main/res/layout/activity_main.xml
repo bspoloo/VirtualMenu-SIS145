@@ -4,104 +4,229 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/background">
+    tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/buttonPlatos"
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonPlatos"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/buttonshape"-->
+    <!--        android:drawableStart="@drawable/foodicon"-->
+    <!--        android:drawablePadding="-30dp"-->
+    <!--        android:paddingLeft="40dp"-->
+    <!--        android:text="Platos"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.496"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.408" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonPostres"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/buttonshape"-->
+    <!--        android:drawableStart="@drawable/desserticon"-->
+    <!--        android:drawablePadding="-30dp"-->
+    <!--        android:paddingLeft="40dp"-->
+    <!--        android:text="Postres"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.496"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.628" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonBebidas"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/buttonshape"-->
+    <!--        android:drawableStart="@drawable/drinkicon"-->
+    <!--        android:drawablePadding="-30dp"-->
+    <!--        android:paddingLeft="40dp"-->
+    <!--        android:text="Bebidas"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.496"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.521" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonAcerca"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/buttonshape"-->
+    <!--        android:drawableStart="@drawable/abouticon"-->
+    <!--        android:drawablePadding="-30dp"-->
+    <!--        android:paddingLeft="40dp"-->
+    <!--        android:text="Acerca de..."-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.496"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.859" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonSalir"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/buttonshape"-->
+    <!--        android:drawableStart="@drawable/exiticon"-->
+    <!--        android:drawablePadding="-30dp"-->
+    <!--        android:paddingLeft="40dp"-->
+    <!--        android:text="Salir"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.354"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.757" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonAdmin"-->
+    <!--        android:layout_width="229dp"-->
+    <!--        android:layout_height="41dp"-->
+    <!--        android:background="@drawable/buttonshape"-->
+    <!--        android:drawableStart="@drawable/baseline_admin_panel_settings_24"-->
+    <!--        android:drawablePadding="-30dp"-->
+    <!--        android:paddingLeft="40dp"-->
+    <!--        android:text="Administrar"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.496"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.959" />-->
+
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="wrap_content"
+        android:layout_height="206dp"
+        android:src="@drawable/banner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
-        android:drawableStart="@drawable/foodicon"
-        android:drawablePadding="-30dp"
-        android:paddingLeft="40dp"
-        android:text="Platos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408" />
+        app:layout_constraintTop_toBottomOf="@+id/banner"
+        app:layout_constraintVertical_bias="0.072">
 
-    <Button
-        android:id="@+id/buttonPostres"
+        <ImageButton
+            android:id="@+id/imgBtnSopa"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/segundo" />
+
+        <ImageButton
+            android:id="@+id/imgBtnSegundo"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/segundo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
-        android:drawableStart="@drawable/desserticon"
-        android:drawablePadding="-30dp"
-        android:paddingLeft="40dp"
-        android:text="Postres"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.628" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.004">
 
-    <Button
-        android:id="@+id/buttonBebidas"
+        <ImageButton
+            android:id="@+id/imgBtnExtra"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/segundo" />
+
+        <ImageButton
+            android:id="@+id/imgBtnGaseosa"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/gaseosas" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
-        android:drawableStart="@drawable/drinkicon"
-        android:drawablePadding="-30dp"
-        android:paddingLeft="40dp"
-        android:text="Bebidas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.0">
 
-    <Button
-        android:id="@+id/buttonAcerca"
+        <ImageButton
+            android:id="@+id/imgBtnRefresco"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/gaseosas" />
+
+        <ImageButton
+            android:id="@+id/imgBtnCerveza"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/gaseosas" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
-        android:drawableStart="@drawable/abouticon"
-        android:drawablePadding="-30dp"
-        android:paddingLeft="40dp"
-        android:text="Acerca de..."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="0.0">
 
-    <Button
-        android:id="@+id/buttonSalir"
+        <ImageButton
+            android:id="@+id/buttonPostres"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/postres" />
+
+        <ImageButton
+            android:id="@+id/buttonAcerca"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/gaseosas" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/adminbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
-        android:drawableStart="@drawable/exiticon"
-        android:drawablePadding="-30dp"
-        android:paddingLeft="40dp"
-        android:text="Salir"
+        android:backgroundTint="@color/btn"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.742" />
+        app:layout_constraintTop_toTopOf="@+id/banner"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/baseline_admin_panel_settings_24" />
 
-    <Button
-        android:id="@+id/buttonAdmin"
-        android:layout_width="229dp"
-        android:layout_height="41dp"
-        android:background="@drawable/buttonshape"
-        android:drawableStart="@drawable/baseline_admin_panel_settings_24"
-        android:drawablePadding="-30dp"
-        android:paddingLeft="40dp"
-        android:text="Administrar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
