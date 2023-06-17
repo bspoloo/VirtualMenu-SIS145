@@ -25,7 +25,6 @@ class PostresActivity : AppCompatActivity() {
         setContentView(binding.root)
         llamarrecyclerview()
 
-
     }
     private fun llamarrecyclerview() {
         producList = ArrayList()
