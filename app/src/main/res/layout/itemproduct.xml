@@ -12,7 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/model_3">
 
         <ImageView
             android:layout_width="100dp"
@@ -61,13 +62,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="presioname"
-                android:id="@+id/botonPrecioname"/>
+                android:id="@+id/botonPrecioname"
+                android:background="@drawable/model_2"/>
             <Button
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Eliminame"
-                android:id="@+id/botonEliminame"/>
+                android:id="@+id/botonEliminame"
+                android:background="@drawable/model_2"/>
 
         </LinearLayout>
     </LinearLayout>

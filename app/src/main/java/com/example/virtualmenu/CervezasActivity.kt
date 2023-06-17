@@ -12,7 +12,7 @@ class CervezasActivity : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()
     private lateinit var binding : ActivityCervezasBinding
 
-    private lateinit var adapterprodct : AdapterMuestraProductos
+    private lateinit var adapterproduct : AdapterMuestraProductos
     private lateinit var producList : ArrayList<ItemProduct>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,16 +24,14 @@ class CervezasActivity : AppCompatActivity() {
     }
 
     private fun llamarrecyclerview() {
-        producList = ArrayList()
-
-        adapterprodct = AdapterMuestraProductos(producList)
-
+        producList = java.util.ArrayList()
+        adapterproduct = AdapterMuestraProductos(producList)
         db.collection("Productos")
-            .whereEqualTo("Tipo","Cervezas")
             .get()
             .addOnSuccessListener { documets ->
                 for(document in documets){
                     val wallItem = document.toObject(ItemProduct::class.java)
+
                     wallItem.id = document.id
                     wallItem.nom = document["Nombre"].toString()
                     wallItem.tip = document["Tipo"].toString()
@@ -41,7 +39,8 @@ class CervezasActivity : AppCompatActivity() {
                     wallItem.pre = document["Precio"].toString().toInt()
                     wallItem.imgProduct = document["Imagen"].toString()
 
-                    binding.recyclerssProductCervezas.adapter = adapterprodct
+
+                    binding.recyclerssProductCervezas.adapter = adapterproduct
                     binding.recyclerssProductCervezas.layoutManager = LinearLayoutManager(this)
                     producList.add(wallItem)
                 }

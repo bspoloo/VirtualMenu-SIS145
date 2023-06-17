@@ -1,5 +1,6 @@
 package com.example.virtualmenu
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,8 +15,8 @@ class AdminActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
     private lateinit var binding : ActivityAdminBinding
-    private lateinit var adapterproduct : Adapterproductos
-    private lateinit var producList : ArrayList<ItemProduct>
+  //  private lateinit var adapterproduct : Adapterproductos
+   // private lateinit var producList : ArrayList<ItemProduct>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,19 +27,27 @@ class AdminActivity : AppCompatActivity() {
         val guardarDatos = findViewById<Button>(R.id.buttonGuardar) as Button
         val borrarProducto = findViewById<Button>(R.id.buttonEliminar) as Button
 
+        val todoslosProductos = findViewById<Button>(R.id.ButtonVerProductos) as Button
+
         guardarDatos.setOnClickListener(){
             agregarDatos()
         }
 
         borrarProducto.setOnClickListener(){
             eliminarProducto()
-            llamarrecyclerview()
+         //   llamarrecyclerview()
         }
 
-        llamarrecyclerview()
+      //  llamarrecyclerview()
+
+        todoslosProductos.setOnClickListener(){
+            val intent = Intent(this , TodoslosProductos_Activity::class.java)
+            startActivity(intent)
+        }
+
     }
 
-    private fun llamarrecyclerview() {
+   /* private fun llamarrecyclerview() {
         producList = ArrayList()
         adapterproduct = Adapterproductos(producList)
         db.collection("Productos")
@@ -61,7 +70,7 @@ class AdminActivity : AppCompatActivity() {
                 }
             }
 
-    }
+    }*/
 
     private fun agregarDatos() {
 
@@ -88,8 +97,8 @@ class AdminActivity : AppCompatActivity() {
                     println("agregado correctamente")
 
 
-                    llamarrecyclerview()
-                    adapterproduct.notifyDataSetChanged()
+                    //llamarrecyclerview()
+                    //adapterproduct.notifyDataSetChanged()
                 }
                 .addOnFailureListener {e-> Log.w("Tag","Error $e")}
 
