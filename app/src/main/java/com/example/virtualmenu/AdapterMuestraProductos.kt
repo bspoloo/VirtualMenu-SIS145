@@ -48,12 +48,19 @@ class AdapterMuestraProductos(private var items: MutableList<ItemProduct>):
 //            println("ollo, soy ${tem.nom} ${item.tip}")
             holder.cardViewDetalles.visibility = View.VISIBLE
 
-            holder.closeBtn.setOnClickListener{
-                holder.cardViewDetalles.visibility = View.GONE
-            }
+            holder.cardviewNombrePlato.text = item.nom
+            holder.cardviewDescripcionPlato.text = item.descp
+            holder.cardviewPrecioPlato.text = item.pre.toString()
 
-
+            Glide.with(holder.itemView.context).load(item.imgProduct).circleCrop().into(holder.imageView)
         }
+
+        holder.closeBtn.setOnClickListener{
+            holder.cardViewDetalles.visibility = View.GONE
+        }
+
+
+
     }
 
     override fun getItemCount(): Int {
@@ -72,6 +79,12 @@ class AdapterMuestraProductos(private var items: MutableList<ItemProduct>):
 
         val cardViewDetalles : CardView = view.findViewById(R.id.cardviewDestalles)
         val closeBtn : ImageButton = view.findViewById(R.id.closeBtn)
+
+
+        val imageView: ImageView = view.findViewById(R.id.imageView)
+        val cardviewNombrePlato: TextView = view.findViewById(R.id.cardviewNombrePlato)
+        val cardviewDescripcionPlato: TextView = view.findViewById(R.id.cardviewDescripcionPlato)
+        val cardviewPrecioPlato: TextView = view.findViewById(R.id.cardviewPrecioPlato)
 
     }
 
