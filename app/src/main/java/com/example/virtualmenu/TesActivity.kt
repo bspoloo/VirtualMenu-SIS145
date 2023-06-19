@@ -19,33 +19,7 @@ class TesActivity : AppCompatActivity() {
         binding = ActivityTesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        llamarrecyclerview()
     }
 
-    private fun llamarrecyclerview() {
-        producList = ArrayList()
 
-        adapterprodct = AdapterMuestraProductos(producList)
-
-        db.collection("Productos")
-            .whereEqualTo("Producto","Tes")
-            .get()
-            .addOnSuccessListener { documets ->
-                for(document in documets){
-                    val wallItem = document.toObject(ItemProduct::class.java)
-                    wallItem.id = document.id
-                    wallItem.nom = document["Nombre"].toString()
-                    wallItem.tip = document["Tipo"].toString()
-                    wallItem.descp = document["Descripcion"].toString()
-                    wallItem.pre = document["Precio"].toString().toInt()
-
-                    wallItem.imgProduct = document["Imagen"].toString()
-
-                    binding.recyclerssProductTes.adapter = adapterprodct
-                    binding.recyclerssProductTes.layoutManager = LinearLayoutManager(this)
-                    producList.add(wallItem)
-                }
-            }
-
-    }
 }

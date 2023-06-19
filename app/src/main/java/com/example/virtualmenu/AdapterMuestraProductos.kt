@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
@@ -41,9 +42,12 @@ class AdapterMuestraProductos(private var items: MutableList<ItemProduct>):
         Glide.with(holder.itemView.context).load(item.imgProduct).circleCrop().into(holder.fotP)
 
         holder.botnPD.setOnClickListener{
-            val activity = it.context //as AppCompatActivity
-            Toast.makeText(activity,"ollo, soy ${item.nom} ${item.tip}", Toast.LENGTH_LONG).show()
-            println("ollo, soy ${item.nom} ${item.tip}")
+//            val activity = it.context //as AppCompatActivity
+//            Toast.makeText(activity,"ollo, soy ${item.nom} ${item.tip}", Toast.LENGTH_LONG).show()
+//            println("ollo, soy ${tem.nom} ${item.tip}")
+            holder.cardViewDetalles.visibility = View.VISIBLE
+
+
 
         }
     }
@@ -61,6 +65,8 @@ class AdapterMuestraProductos(private var items: MutableList<ItemProduct>):
         //para los botones creados en itemproduct
 
         val botnPD: Button = view.findViewById(R.id.botonDetalles)
+
+        val cardViewDetalles : CardView = view.findViewById(R.id.cardviewDestalles)
 
 
     }
