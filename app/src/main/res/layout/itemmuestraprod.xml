@@ -8,13 +8,13 @@
     android:layout_marginStart="4dp"
     android:layout_marginTop="4dp"
     android:layout_marginEnd="4dp"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="30dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@drawable/model_1">
+        android:background="@drawable/model_4">
 
         <ImageView
             android:layout_width="100dp"
@@ -31,8 +31,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nombre del Producto"
-                android:id="@+id/nombreProducto"
                 android:textStyle="bold"
+                android:textColor="#EA8A4A"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre del Producto"
+                android:id="@+id/nombreProducto"
                 android:textColor="#EA8A4A"/>
 
             <TextView
@@ -40,7 +45,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Tipo del Producto"
+                android:textStyle="bold"
+                android:textColor="#EA8A4A"/>
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipo del Producto"
                 android:id="@+id/tipoProducto"
+                android:textColor="#EA8A4A"/>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripcion del Producto"
                 android:textStyle="bold"
                 android:textColor="#EA8A4A"/>
             <TextView
@@ -49,16 +68,21 @@
                 android:layout_height="wrap_content"
                 android:hint="Descripcion del Producto"
                 android:id="@+id/descpProducto"
-                android:textStyle="bold"
                 android:textColor="#EA8A4A"/>
 
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Precio del Producto en BS"
+                android:textStyle="bold"
+                android:textColor="#EA8A4A"/>
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Precio del Producto"
                 android:id="@+id/precioProducto"
-                android:textStyle="bold"
                 android:textColor="#EA8A4A"/>
             <Button
 

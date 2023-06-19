@@ -7,13 +7,13 @@
     android:layout_marginStart="4dp"
     android:layout_marginTop="4dp"
     android:layout_marginEnd="4dp"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="30dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@drawable/model_3">
+        android:background="@drawable/model_4">
 
         <ImageView
             android:layout_width="100dp"
@@ -30,38 +30,65 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nombre del Producto"
-                android:id="@+id/nombreProducto"/>
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/nombreProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre del Producto"
+                android:textColor="#E7A121" />
 
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Tipo del Producto"
-                android:id="@+id/tipoProducto"/>
+                android:textStyle="bold"/>
+
+            <TextView
+
+                android:id="@+id/tipoProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipo del Producto"
+                android:textColor="#E7A121" />
+
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Descripcion del Producto"
-                android:id="@+id/descpProducto"/>
+                android:textStyle="bold"/>
+
+            <TextView
+
+                android:id="@+id/descpProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripcion del Producto"
+                android:textColor="#E7A121" />
+
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Producto"
-                android:id="@+id/productProducto"/>
+                android:hint="Precio del Producto en BS"
+                android:textStyle="bold"/>
 
             <TextView
 
+                android:id="@+id/precioProducto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Precio del Producto"
-                android:id="@+id/precioProducto"/>
+                android:textColor="#E7A121" />
             <Button
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="presioname"
+                android:textColor="@color/white"
                 android:id="@+id/botonPrecioname"
                 android:background="@drawable/model_2"/>
             <Button
@@ -70,7 +97,8 @@
                 android:layout_height="wrap_content"
                 android:text="Eliminame"
                 android:id="@+id/botonEliminame"
-                android:background="@drawable/model_2"/>
+                android:background="@drawable/model_4"
+                android:textColor="#E7A121"/>
 
         </LinearLayout>
     </LinearLayout>

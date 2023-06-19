@@ -37,6 +37,7 @@ class TodoslosProductos_Activity : AppCompatActivity() {
             .addOnSuccessListener { documets ->
                 for(document in documets){
                     val wallItem = document.toObject(ItemProduct::class.java)
+
                     wallItem.id = document.id
                     wallItem.nom = document["Nombre"].toString()
                     wallItem.tip = document["Tipo"].toString()

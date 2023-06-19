@@ -39,8 +39,8 @@ class Adapterproductos(private var items: MutableList<ItemProduct>): //
         holder.botnPP.setOnClickListener{
 
             val activity = it.context //as AppCompatActivity
-            Toast.makeText(activity,"ollo, soy ${item.nom} ${item.tip}", Toast.LENGTH_LONG).show()
-            println("ollo, soy ${item.nom} ${item.tip}")
+            Toast.makeText(activity,"El ID de ${item.nom} es ${item.id}", Toast.LENGTH_LONG).show()
+            //println("ollo, soy ${item.nom} ${item.tip}")
 
 
         }
@@ -73,6 +73,10 @@ class Adapterproductos(private var items: MutableList<ItemProduct>): //
                 //no pasa nada xd
             }
             builder.show()
+
+
+//        var uniPedido: String = item.uniProduct
+//        holder.uniDaP.setText(uniPedido)
         }
     }
 
@@ -92,6 +96,9 @@ class Adapterproductos(private var items: MutableList<ItemProduct>): //
 
         val botnPP: Button = view.findViewById(R.id.botonPrecioname)
         val botnPE: Button = view.findViewById(R.id.botonEliminame)
+
+
+
 
     }
 
