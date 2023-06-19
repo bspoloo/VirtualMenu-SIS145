@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -47,6 +48,9 @@ class AdapterMuestraProductos(private var items: MutableList<ItemProduct>):
 //            println("ollo, soy ${tem.nom} ${item.tip}")
             holder.cardViewDetalles.visibility = View.VISIBLE
 
+            holder.closeBtn.setOnClickListener{
+                holder.cardViewDetalles.visibility = View.GONE
+            }
 
 
         }
@@ -68,7 +72,7 @@ class AdapterMuestraProductos(private var items: MutableList<ItemProduct>):
         val botnPD: Button = view.findViewById(R.id.botonDetalles)
 
         val cardViewDetalles : CardView = view.findViewById(R.id.cardviewDestalles)
-
+        val closeBtn : ImageButton = view.findViewById(R.id.closeBtn)
 
     }
 
