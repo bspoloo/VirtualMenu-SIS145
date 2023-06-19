@@ -75,9 +75,10 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="350dp"
         android:visibility="gone"
-        android:id="@+id/cardviewDestalles">
+        android:id="@+id/cardviewDestalles"
+        app:cardCornerRadius="30dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -85,7 +86,7 @@
             android:background="@drawable/model_3">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageViewDetalles"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -93,89 +94,97 @@
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.053" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nombre del plato"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.052"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.501" />
-
-            <TextView
-                android:id="@+id/cardviewNombrePlato"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nombre del plato"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.052"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.563" />
+                app:layout_constraintVertical_bias="0.041" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Descripcion del plato"
+                android:textAlignment="center"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintHorizontal_bias="0.486"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.632" />
+                app:layout_constraintVertical_bias="0.767" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del plato"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.64" />
 
             <TextView
                 android:id="@+id/cardviewDescripcionPlato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Descripcion del plato"
+                android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintHorizontal_bias="0.481"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.696" />
+                app:layout_constraintVertical_bias="0.833" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Precio del plato"
+                android:text="Precio del plato en Bs"
+                android:textAlignment="center"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.76" />
+                app:layout_constraintVertical_bias="0.897" />
 
             <TextView
                 android:id="@+id/cardviewPrecioPlato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Precio del plato"
+                android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.827" />
+                app:layout_constraintVertical_bias="0.954" />
+
+            <TextView
+                android:id="@+id/cardviewNombrePlato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del plato"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.484"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.703" />
 
             <ImageButton
                 android:id="@+id/closeBtn"
-                android:layout_width="33dp"
-                android:layout_height="28dp"
-                android:src="@drawable/exit_icon"
-                android:background="@null"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/boton_cerrar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.928"
+                app:layout_constraintHorizontal_bias="0.955"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.050" />
+                app:layout_constraintVertical_bias="0.02" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

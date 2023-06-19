@@ -27,6 +27,7 @@ class CervezasActivity : AppCompatActivity() {
         producList = java.util.ArrayList()
         adapterproduct = AdapterMuestraProductos(producList)
         db.collection("Productos")
+            .whereEqualTo("Tipo", "Cervezas")
             .get()
             .addOnSuccessListener { documets ->
                 for(document in documets){
