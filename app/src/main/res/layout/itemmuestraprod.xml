@@ -76,8 +76,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:visibility="gone"
-        android:id="@+id/cardviewDestalles">
+        android:visibility="visible"
+        android:id="@+id/cardviewDestalles"
+        app:cardCornerRadius="30dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
